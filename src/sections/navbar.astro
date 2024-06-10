@@ -18,7 +18,31 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
                 <a href="#" class="nav_link">Proyectos</a>
             </li>
         </ul>
+        <a onclick="openNav()" class="menu" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" data-icon="SvgMenu" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+        </a>
     </nav>
+
+    <div class="navbar_mobile" id="navbar_mobile">
+        <a onclick="closeNav()" class="close" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" data-icon="SvgMenu" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+        </a>
+        <div class="navbar_menu">
+            <a href="" class="navbar_link link">Inicio</a>
+            <a href="" class="navbar_link link">Sobre mi</a>
+            <a href="" class="navbar_link link">Proyectos</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function openNav(){
+            document.getElementById("navbar_mobile").style.width = "100%";
+        }
+
+        function closeNav(){
+            document.getElementById("navbar_mobile").style.width = "0%";
+        }
+    </script>
 </section>
 
 <style>
@@ -28,6 +52,7 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
         height: 90px;
         background: linear-gradient(#000000 50%, #00000000);
         position: fixed;
+        z-index: 10;
         top: 0;
         left: 0;
     }
@@ -63,6 +88,59 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
 
     .link_logo{
         cursor: pointer;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 500px) {
+        .nav_list_item{
+            display: none;
+        }
+    }
+
+    /* Ressponssive */
+
+    .link{
+        text-decoration: none;
+    }
+
+    .navbar_mobile{
+        height: 100%;
+        width: 0%;
+        position: fixed;
+        z-index: 20;
+        left: 0;
+        top: 0;
+        background-color: #ffffffd6;
+        overflow: hidden;
+        transition: all 0.3s;
+        font-size: 50px;
+    }
+
+    .navbar_menu{
+        display: flex;
+        height: 100%;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .menu svg{
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .close{
+        position: absolute;
+        right: 45px;
+        top: 24px;   
+        max-height: ; 
+    }
+
+    .navbar_link{
+        color: #000000;
+        font-weight: 800;
     }
 
 </style>
