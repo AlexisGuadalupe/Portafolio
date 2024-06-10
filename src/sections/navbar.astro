@@ -91,13 +91,19 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
         margin-top: 5px;
     }
 
+    /* Ressponssive */
+
     @media (max-width: 500px) {
         .nav_list_item{
             display: none;
         }
     }
 
-    /* Ressponssive */
+    @media (min-width: 500px) {
+        .menu{
+            display: none;
+        }
+    }
 
     .link{
         text-decoration: none;
@@ -113,7 +119,7 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
         background-color: #ffffffd6;
         overflow: hidden;
         transition: all 0.3s;
-        font-size: 50px;
+        font-size: 36px;
     }
 
     .navbar_menu{
@@ -141,6 +147,10 @@ import ProgrammingLogo from "@/components/programmingLogo.astro"
     .navbar_link{
         color: #000000;
         font-weight: 800;
+        transition: scale 0.3s;
     }
 
+    .navbar_link:hover{
+        scale: 1.2;
+    }
 </style>
