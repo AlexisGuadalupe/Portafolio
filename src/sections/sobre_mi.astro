@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import sobremi from "src/img/sobre_mi/sobremi.png"
+---
+
+<section class="sobre_mi_container">
+    <h2 class="sobre_mi_title">Sobre mi</h2>
+    <div class="sobre_mi_contenido">
+
+        <div class="sobre_mi_text_container">
+            <p class="sobre_mi_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia velit unde reprehenderit sit accusantium debitis laborum! Iste doloremque tempore debitis. Impedit nesciunt quisquam eveniet pariatur ad atque voluptatem magni harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sunt hic. Alias rerum, nobis maxime commodi quae minus eos, iure officiis tempora ratione maiores dolorem esse beatae in incidunt dolore?</p>
+        </div>
+
+        <div class="image_contaner">
+            <Image src={sobremi} alt="" class="perfil" />
+        </div>
+    </div>
+</section>
+
+<style>
+    .sobre_mi_title{
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+    }
+
+    .sobre_mi_container{
+        height: 90vh;
+    }
+
+    .sobre_mi_text_container, .image_contaner{
+        width: 50%;
+    }
+
+    .sobre_mi_text{
+        margin-left: 40px;
+        margin-top: 80px;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .perfil{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .sobre_mi_contenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .image_contaner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
