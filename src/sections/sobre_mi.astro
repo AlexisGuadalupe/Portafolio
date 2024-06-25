@@ -7,13 +7,16 @@ import sobremi from "src/img/sobre_mi/sobremi.png"
     <h2 class="sobre_mi_title">Sobre mi</h2>
     <div class="sobre_mi_contenido">
 
+        
+            <div class="image_contaner">
+                <Image src={sobremi} alt="" class="perfil" />
+            </div>
+
         <div class="sobre_mi_text_container">
             <p class="sobre_mi_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia velit unde reprehenderit sit accusantium debitis laborum! Iste doloremque tempore debitis. Impedit nesciunt quisquam eveniet pariatur ad atque voluptatem magni harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sunt hic. Alias rerum, nobis maxime commodi quae minus eos, iure officiis tempora ratione maiores dolorem esse beatae in incidunt dolore?</p>
         </div>
+        
 
-        <div class="image_contaner">
-            <Image src={sobremi} alt="" class="perfil" />
-        </div>
     </div>
 </section>
 
@@ -25,16 +28,22 @@ import sobremi from "src/img/sobre_mi/sobremi.png"
     }
 
     .sobre_mi_container{
-        height: 90vh;
+        margin-bottom: 80px;
     }
 
     .sobre_mi_text_container, .image_contaner{
         width: 50%;
     }
 
+    .sobre_mi_text_container{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
     .sobre_mi_text{
         margin-left: 40px;
-        margin-top: 80px;
+        margin-right: 40px;
         color: #fff;
         font-size: 20px;
     }
@@ -57,4 +66,30 @@ import sobremi from "src/img/sobre_mi/sobremi.png"
         justify-content: center;
         align-items: center;
     }
+
+    @media (800px <= width <= 1000px){
+        .perfil{
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media (30px <= width <= 800px){
+        .sobre_mi_text_container, .image_contaner{
+        width: 100%;
+        }
+
+        .sobre_mi_contenido{
+        flex-direction: column;
+        }
+
+        .perfil{
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    
+
+    
 </style>
