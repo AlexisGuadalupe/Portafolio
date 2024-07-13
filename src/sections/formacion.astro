@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets"
+import certificado_beta from "src/img/formacion/certificado_beta.png"
+import curso_dalto from "src/img/formacion/html_y_css_dalto.png"
+---
+
+<section class="formacion">
+    <h2 class="formacion_title">Formación</h2>
+
+    <div class="card_container">
+        <article class="card_de_formacion">
+            <Image src={certificado_beta} alt="" class="formacion_image" />
+            <h3 class="title_card_formacion">Beta hub: HTML Y CSS</h3>
+            <p class="card_formacion_description">
+                Curso enfocado en el desarrollo web que explica como funciona HTML y CSS más sus propiedades y funciones terminando con lo básico de git y github.
+            </p>
+        </article>
+
+        <article class="card_de_formacion">
+            <Image src={curso_dalto} alt="" class="formacion_image" />
+            <h3 class="title_card_formacion">Curso de HTML y CSS desde CERO (Completo)</h3>
+            <p class="card_formacion_description">
+                Curso enfocado en el desarrollo web de youtube con una duración de 24 horas donder se explica HTML y CSS.
+            </p>
+        </article>
+
+
+    </div>
+        
+</section>
+
+<style>
+    .formacion_title{
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .card_de_formacion{
+        width: 300px;
+        height: 400px;
+        color: #fff;
+        border-radius: 30px;
+        background-color: rgb(186, 27, 27);
+        box-shadow: 0 0 20px #fff;
+        background-color: #252b3a;
+    }
+
+    .formacion_image{
+        width: 100%;
+        height: 200px;
+        border-radius: 30px;
+        object-fit: cover;
+        background-color: blue;
+    }
+
+    .card_container{
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        margin-bottom: 60px;
+    }
+
+    .title_card_formacion{
+        margin-left: 10px;
+    }
+
+    .card_formacion_description{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+</style>
